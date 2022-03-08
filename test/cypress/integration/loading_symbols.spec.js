@@ -3,6 +3,6 @@ describe('Loading Symbols', () => {
     cy.visit('/');
     cy.contains('SPY');
     cy.contains('SPDR S&P 500 ETF Trust');
-    cy.contains('419.43');
+    cy.get('*[class^="symbol-price"]');
   });
 });
