@@ -1,0 +1,22 @@
+.filter-container {
+  height: 200px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 60vw;
+  margin-right: 20px;
+  color: #cf4278;
+  border-radius: 20px;
+}
+
+button {
+  padding: 5px 20px;
+  border: 1px dotted #cf4278;
+  border-radius: 20px;
+  background: #cf4278;
+  color: white;
+}
