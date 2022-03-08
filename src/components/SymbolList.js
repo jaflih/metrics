@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getSymbolsDispatcher } from '../redux/symbols/symbols';
+
 import Symbol from './Symbol';
-import symbolsDatas from '../datas/symbols';
 
 export default function SymbolList() {
-  const symbols = symbolsDatas;
+  const dispatch = useDispatch();
+
+  const isSymbolsStored = useSelector((state) => state.symbolsReducer.isSymbolsStored || false);
+  const symbols = useSelector((state) => state.symbolsReducer.symbols || []);
+
+  useEffect(() => {
+    if (!isSymbolsStored) {
+      dispatch(getSymbolsDispatcher());
+    }
+  });
+
   return (
     <div className="symbols-container">
       {symbols.map((symbol) => (
