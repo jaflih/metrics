@@ -5,12 +5,11 @@ const FMP_API = `https://financialmodelingprep.com/api/v3/available-traded/list?
 
 export const getSymbolsFromAPI = async () => {
   const getData = await axios.get(FMP_API);
-  const symbols = [];
-  for (let i = 0; i < 100; i += 1) {
-    symbols.push(getData.data[i]);
+  const symbolsList = [];
+  for (let i = 0; i < 1000; i += 1) {
+    symbolsList.push(getData.data[i]);
   }
-
-  return symbols;
+  return symbolsList;
 };
 
 export default getSymbolsFromAPI;
