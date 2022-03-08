@@ -19,6 +19,13 @@ describe('Symbols actions', () => {
 
       expect(newState).toEqual({
         isSymbolsStored: true,
+        filteredSymbols: {
+          symbol: 'CMCSA',
+          name: 'Comcast Corporation',
+          price: 46.3,
+          exchange: 'Nasdaq Global Select',
+          exchangeShortName: 'NASDAQ',
+        },
         symbols: {
           symbol: 'CMCSA',
           name: 'Comcast Corporation',
