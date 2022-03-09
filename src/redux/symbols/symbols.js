@@ -3,8 +3,9 @@ import { getCompanyProfileFromAPI, getSymbolsFromAPI } from '../api/financialmod
 export const GET_SYMBOLS = 'GET_SYMBOLS';
 export const SEARCH_SYMBOLS = 'SEARCH_SYMBOLS';
 export const GET_COMPANY = 'GET_COMPANY';
+export const SHOW_LOADER = 'SHOW_LOADER';
 
-const symbolsReducer = (state = {}, action) => {
+const symbolsReducer = (state = { loading: true }, action) => {
   switch (action.type) {
     case GET_SYMBOLS: {
       return {
@@ -12,6 +13,7 @@ const symbolsReducer = (state = {}, action) => {
         isSymbolsStored: true,
         symbols: action.payload,
         filteredSymbols: action.payload,
+        loading: false,
       };
     }
     case GET_COMPANY: {
@@ -64,3 +66,7 @@ export const getCompanyDispatcher = (company) => async (dispatch) => {
   const profile = await getCompanyProfileFromAPI(company);
   dispatch(getCompany(profile));
 };
+
+export const getLoader = () => ({
+  type: SHOW_LOADER,
+});
