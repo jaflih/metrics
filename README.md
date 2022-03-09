@@ -9,6 +9,7 @@ In this app, you can :
 - Load stocks
 - Search specific stocks
 - Show profile company that has stock
+  -test
 
 ## Built With
 
