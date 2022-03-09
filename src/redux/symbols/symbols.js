@@ -13,7 +13,7 @@ const symbolsReducer = (state = { loading: true }, action) => {
         isSymbolsStored: true,
         symbols: action.payload,
         filteredSymbols: action.payload,
-        nbResult: [action.payload].length,
+        nbResult: action.payload.length,
         loading: false,
       };
     }

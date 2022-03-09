@@ -11,36 +11,42 @@ jest.mock('../../src/redux/api/financialmodelingprep');
 describe('Symbols actions', () => {
   describe('load symbols', () => {
     it('GET_SYMBOLS', () => {
-      const state = [];
+      const state = {};
       const newState = symbolsReducer(state, {
         type: GET_SYMBOLS,
-        payload: {
-          symbol: 'CMCSA',
-          name: 'Comcast Corporation',
-          price: 46.3,
-          exchange: 'Nasdaq Global Select',
-          exchangeShortName: 'NASDAQ',
-        },
+        payload: [
+          {
+            symbol: 'CMCSA',
+            name: 'Comcast Corporation',
+            price: 46.3,
+            exchange: 'Nasdaq Global Select',
+            exchangeShortName: 'NASDAQ',
+          },
+        ],
       });
 
       expect(newState).toEqual({
         isSymbolsStored: true,
         loading: false,
         nbResult: 1,
-        filteredSymbols: {
-          symbol: 'CMCSA',
-          name: 'Comcast Corporation',
-          price: 46.3,
-          exchange: 'Nasdaq Global Select',
-          exchangeShortName: 'NASDAQ',
-        },
-        symbols: {
-          symbol: 'CMCSA',
-          name: 'Comcast Corporation',
-          price: 46.3,
-          exchange: 'Nasdaq Global Select',
-          exchangeShortName: 'NASDAQ',
-        },
+        filteredSymbols: [
+          {
+            symbol: 'CMCSA',
+            name: 'Comcast Corporation',
+            price: 46.3,
+            exchange: 'Nasdaq Global Select',
+            exchangeShortName: 'NASDAQ',
+          },
+        ],
+        symbols: [
+          {
+            symbol: 'CMCSA',
+            name: 'Comcast Corporation',
+            price: 46.3,
+            exchange: 'Nasdaq Global Select',
+            exchangeShortName: 'NASDAQ',
+          },
+        ],
       });
     });
 
