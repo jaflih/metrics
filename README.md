@@ -6,9 +6,9 @@
 
 In this app, you can :
 
-- load stocks
-- search specific stocks
-- show profile company that has stock
+- Load stocks
+- Search specific stocks
+- Show profile company that has stock
 
 ## Built With
 
