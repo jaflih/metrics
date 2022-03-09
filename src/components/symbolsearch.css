@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 input {
@@ -19,4 +20,14 @@ button {
   border-radius: 20px;
   background: #cf4278;
   color: white;
+}
+
+.nb-result {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.nb-result span {
+  margin-right: 10px;
 }

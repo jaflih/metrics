@@ -13,6 +13,7 @@ const symbolsReducer = (state = { loading: true }, action) => {
         isSymbolsStored: true,
         symbols: action.payload,
         filteredSymbols: action.payload,
+        nbResult: [action.payload].length,
         loading: false,
       };
     }
@@ -31,6 +32,7 @@ const symbolsReducer = (state = { loading: true }, action) => {
         isSymbolsStored: true,
         symbols: state.symbols,
         filteredSymbols: filSymList,
+        nbResult: filSymList.length,
       };
     }
     default: {

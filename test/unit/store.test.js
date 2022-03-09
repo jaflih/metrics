@@ -26,6 +26,7 @@ describe('Symbols actions', () => {
       expect(newState).toEqual({
         isSymbolsStored: true,
         loading: false,
+        nbResult: 1,
         filteredSymbols: {
           symbol: 'CMCSA',
           name: 'Comcast Corporation',
@@ -159,6 +160,7 @@ describe('Symbols actions', () => {
 
       expect(newState).toEqual({
         isSymbolsStored: true,
+        nbResult: 1,
         filteredSymbols: [
           {
             symbol: 'MU',
