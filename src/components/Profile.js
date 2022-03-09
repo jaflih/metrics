@@ -30,7 +30,7 @@ export default function Profile() {
             <span className="profile-companyName">{company.companyName}</span>
             {company.description && (
               <span className="profile-description">
-                {company.description.substring(0, 200)}
+                {company.description.substring(0, 300)}
                 ...
               </span>
             )}
