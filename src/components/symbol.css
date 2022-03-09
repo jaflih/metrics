@@ -5,13 +5,14 @@
   background: #ec4c8a;
 }
 
-.symbols-container > div:nth-child(odd) {
+.symbols-container > div:nth-child(4n),
+.symbols-container > div:nth-child(4n + 1) {
   background: #fb5092;
   background-image: url('https://jaflih.github.io/ScienceFestivalSite/assets/images/program_bg.png');
   background-size: 3px;
 }
 
-.symbols-container > div:nth-child(even) {
+.symbols-container > div:nth-child(-10) {
   background: #cf4278;
 }
 
@@ -28,12 +29,12 @@
 }
 
 .symbol-info {
-  min-height: 180px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding: 20px;
+  padding-right: 20px;
 }
 
 .symbol-price {
@@ -58,5 +59,12 @@
 @media (min-width: 950px) {
   .symbol-container {
     width: calc(1 / 5 * 100% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .symbol-container {
+    width: calc(1 / 2 * 100% - 1rem);
+    border-bottom: 1px solid #fb509275;
   }
 }

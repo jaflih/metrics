@@ -43,26 +43,26 @@
   flex-wrap: wrap;
   background: #ec4c8a;
   justify-content: center;
+  flex-direction: column;
 }
 
 .company-body > div {
   background: #ec4c8a;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  margin: 20px 20px 0 20px;
+  flex-direction: row-reverse;
+  padding: 20px;
 }
 
 .company-attribute {
   text-transform: uppercase;
-  margin-bottom: 20px;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .profile-description {
-  font-size: 12px;
+  font-size: 14px;
   margin: 10px 20px 30px 10px;
 }
 
@@ -88,4 +88,8 @@ a {
 
 .profile-currency {
   font-size: 20px;
+}
+
+.company-body div:nth-child(even) {
+  background-color: #ce4176;
 }
