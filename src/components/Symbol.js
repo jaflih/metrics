@@ -8,7 +8,7 @@ export default function Symbol({ symbol }) {
   return (
     <div className="symbol-container">
       <div className="symbol-link" data-testid={symbol.symbol}>
-        <Link to={`/company/${symbol.symbol}`}>link</Link>
+        <Link to={`/company/${symbol.symbol}`}>➪</Link>
       </div>
       <div className="symbol-info">
         <span className="symbol-symbol">{symbol.symbol}</span>
