@@ -10,7 +10,6 @@ function App() {
       <Routes>
         <Route path="/metrics/" element={<SymbolPage />} />
         <Route path="/metrics/company/:name" element={<Profile />} />
-        <Route path="/metrics/*" element={<NotMatch />} />
       </Routes>
     </div>
   );
