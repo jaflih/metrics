@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "unit": "react-scripts test",
     "eject": "react-scripts eject",
     "style": "stylelint \"**/*.{css,scss}\" --fix",
     "eslint": "eslint . --fix",
@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "e2e": "cypress open",
-    "unit": "jest test/**/*.spec.js"
+    "test": "jest test/unit"
   },
   "eslintConfig": {
     "extends": [
@@ -65,6 +65,7 @@
     "enzyme": "^3.11.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
@@ -75,11 +76,5 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/setup.js"
-    ],
-    "testEnvironment": "jsdom"
   }
 }
