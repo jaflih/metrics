@@ -20,7 +20,7 @@ export default function SymbolList() {
       {symbols.map((symbol) => (
         <Symbol key={symbol.symbol} symbol={symbol} />
       ))}
-      {symbols.length === 0 && <div>Not found</div>}
+      {symbols.length === 0 && isSymbolsStored && <div className="symbols-not-found">Not found.</div>}
     </div>
   );
 }

@@ -49,6 +49,12 @@
   font-size: 20px;
 }
 
+.symbols-not-found {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+}
+
 @media (min-width: 950px) {
   .symbol-container {
     width: calc(1 / 5 * 100% - 1rem);
