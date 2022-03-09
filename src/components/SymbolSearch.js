@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getFilteredSymbols } from '../redux/symbols/symbols';
 
 import './symbolsearch.css';
@@ -7,6 +7,7 @@ import './symbolsearch.css';
 export default function SymbolSearch() {
   const [inputSearch, setInputSearch] = useState('');
   const dispatch = useDispatch();
+  const nbResult = useSelector((state) => state.symbolsReducer.nbResult || 0);
 
   const handleClick = () => {
     dispatch(getFilteredSymbols(inputSearch.toUpperCase()));
@@ -20,6 +21,10 @@ export default function SymbolSearch() {
           Search
         </button>
       </form>
+      <div className="nb-result">
+        <span>{nbResult}</span>
+        found.
+      </div>
     </div>
   );
 }
