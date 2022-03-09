@@ -5,8 +5,7 @@
   background: #ec4c8a;
 }
 
-.symbols-container > div:nth-child(4n),
-.symbols-container > div:nth-child(4n + 1) {
+.symbols-container > div:nth-child(even) {
   background: #fb5092;
   background-image: url('https://jaflih.github.io/ScienceFestivalSite/assets/images/program_bg.png');
   background-size: 3px;
@@ -66,5 +65,20 @@
   .symbol-container {
     width: calc(1 / 2 * 100% - 1rem);
     border-bottom: 1px solid #fb509275;
+  }
+
+  .symbols-container > div:nth-child(even) {
+    background: none;
+  }
+
+  .symbols-container > div:nth-child(4n),
+  .symbols-container > div:nth-child(4n + 1) {
+    background: #fb5092;
+    background-image: url('https://jaflih.github.io/ScienceFestivalSite/assets/images/program_bg.png');
+    background-size: 3px;
+  }
+
+  .symbols-container > div:nth-child(-10) {
+    background: #cf4278;
   }
 }
