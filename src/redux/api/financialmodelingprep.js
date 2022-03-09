@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const API_KEY = 'f8ec60a98ee35476d340d0daaf553da2';
-const FMP_API = `https://financialmodelingprep.com/api/v3/available-traded/list?apikey=${API_KEY}`;
+const API_KEY = '?apikey=d1e19765909fe22f5eba1fca43a97de2';
+const FMP_API = `https://financialmodelingprep.com/api/v3/available-traded/list${API_KEY}`;
+const FMP_CP_API = 'https://financialmodelingprep.com/api/v3/profile/';
 
 export const getSymbolsFromAPI = async () => {
   const getData = await axios.get(FMP_API);
@@ -10,6 +11,11 @@ export const getSymbolsFromAPI = async () => {
     symbolsList.push(getData.data[i]);
   }
   return symbolsList;
+};
+
+export const getCompanyProfileFromAPI = async (company) => {
+  const getData = await axios.get(`${FMP_CP_API}${company}${API_KEY}`);
+  return getData.data[0];
 };
 
 export default getSymbolsFromAPI;

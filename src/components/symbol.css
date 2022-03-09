@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background: #ec4c8a;
 }
 
 .symbols-container > div:nth-child(odd) {
