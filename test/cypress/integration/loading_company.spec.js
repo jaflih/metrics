@@ -4,11 +4,9 @@ describe('Loading Company Profile', () => {
     cy.contains('SPY');
     cy.contains('SPDR S&P 500 ETF Trust');
     cy.contains('USD');
-    cy.get('*[class^="profile-price"]');
-    cy.get('*[class^="profile-changes"]');
-    cy.get('*[class^="profile-exchangeShortName"]');
+    cy.get('*[class^="profile-currency"]');
+    cy.get('*[class^="company-attribute"]');
     cy.get('*[class^="profile-image"]');
-    cy.get('*[class^="profile-sector"]');
-    cy.get('*[class^="profile-country"]');
+    cy.get('*[class^="profile-companyName"]');
   });
 });
