@@ -9,7 +9,6 @@ In this app, you can :
 - Load stocks
 - Search specific stocks
 - Show profile company that has stock
-  -test
 
 ## Built With
 
@@ -76,9 +75,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Designed by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 
