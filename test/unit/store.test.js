@@ -1,4 +1,10 @@
-import symbolsReducer, { SEARCH_SYMBOLS, GET_SYMBOLS, getSymbolsDispatcher } from '../../src/redux/symbols/symbols';
+import symbolsReducer, {
+  SEARCH_SYMBOLS,
+  GET_SYMBOLS,
+  GET_COMPANY,
+  getSymbolsDispatcher,
+  getCompanyDispatcher,
+} from '../../src/redux/symbols/symbols';
 
 jest.mock('../../src/redux/api/financialmodelingprep');
 
@@ -198,6 +204,63 @@ describe('Symbols actions', () => {
             exchangeShortName: 'NASDAQ',
           },
         ],
+      });
+    });
+  });
+
+  describe('load company', () => {
+    it('GET_COMPANY', () => {
+      const state = [];
+      const newState = symbolsReducer(state, {
+        type: GET_COMPANY,
+        payload: [
+          {
+            symbol: 'SPY',
+            price: 416.25,
+            beta: 1.0,
+            volAvg: 111819549,
+            mktCap: 382026776576,
+            lastDiv: 5.718,
+            range: '383.9-479.98',
+            changes: -3.17999,
+            companyName: 'SPDR S&P 500 ETF Trust',
+          },
+        ],
+      });
+
+      expect(newState).toEqual({
+        company: [
+          {
+            symbol: 'SPY',
+            price: 416.25,
+            beta: 1.0,
+            volAvg: 111819549,
+            mktCap: 382026776576,
+            lastDiv: 5.718,
+            range: '383.9-479.98',
+            changes: -3.17999,
+            companyName: 'SPDR S&P 500 ETF Trust',
+          },
+        ],
+      });
+    });
+
+    it('company profile retrieved from the API', () => {
+      const dispatch = jest.fn();
+
+      getCompanyDispatcher('SPY')(dispatch).then(() => {
+        expect(dispatch).toHaveBeenCalledWith({
+          type: GET_COMPANY,
+          payload: [
+            {
+              symbol: 'SPY',
+              price: 416.25,
+              beta: 1.0,
+              volAvg: 111819549,
+              mktCap: 382026776576,
+            },
+          ],
+        });
       });
     });
   });

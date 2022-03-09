@@ -15,4 +15,14 @@ export const getSymbolsFromAPI = async () => [
   },
 ];
 
+export const getCompanyProfileFromAPI = async () => [
+  {
+    symbol: 'SPY',
+    price: 416.25,
+    beta: 1.0,
+    volAvg: 111819549,
+    mktCap: 382026776576,
+  },
+];
+
 export default getSymbolsFromAPI;
