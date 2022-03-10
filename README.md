@@ -1,20 +1,23 @@
-# React boilerplate
+# Metrics
 
-> One paragraph statement about the project.
+> Metric is a mobile web application to check a list of stocks.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./metrics.gif)
 
-Additional description about the project and its features.
+In this app, you can :
+
+- Load stocks
+- Search specific stocks
+- Show profile company that has stock
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- Redux
 
 ## Live Demo
 
-[Live Demo Link](https://jihaneh.github.io/)
+[Live Demo Link](https://jaflih.github.io/metrics/)
 
 ## Getting Started
 
@@ -24,7 +27,7 @@ In the project directory, you can run:
 
 `npm install`
 
-Install the app with its dependencies.\
+Install the app with its dependencies.
 
 ### Runs the app in the development mode
 
@@ -37,9 +40,13 @@ You may also see any lint errors in the console.
 
 ### Test
 
-`npm test`
+`npm run test`
 
 Launches the test runner in the interactive watch mode.\
+
+`npm run e2e`
+
+Launches the integrity test runner in the interactive watch mode.\
 
 ### Builds the app for production
 
@@ -53,8 +60,8 @@ Your app is ready to be deployed!
 
 👤 **JihaneH**
 
-- GitHub: [@githubhandle](https://github.com/jihaneH)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
+- GitHub: [@githubhandle](https://github.com/jaflih)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jaflih/)
 
 ## 🤝 Contributing
 
@@ -68,9 +75,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Designed by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 

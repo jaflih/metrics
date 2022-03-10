@@ -1,0 +1,33 @@
+.filter-container {
+  height: 200px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  width: 60vw;
+  margin-right: 20px;
+  color: #cf4278;
+  border-radius: 20px;
+}
+
+button {
+  padding: 5px 20px;
+  border: 1px dotted #cf4278;
+  border-radius: 20px;
+  background: #cf4278;
+  color: white;
+}
+
+.nb-result {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.nb-result span {
+  margin-right: 10px;
+}
